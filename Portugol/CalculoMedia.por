@@ -10,11 +10,11 @@ programa
 		//multiplica a nota(n1,n2,n3 pelo peso,2,3,5
 		r1 = n1*p1	
 		
-		escreva("insira sua primeira nota : ")	
+		escreva("insira sua segunda nota : ")	
 		leia(n2)
 		
 		r2 =n2*p2
-		escreva("insira sua primeira nota : ")
+		escreva("insira sua terceira nota : ")
 			
 		leia(n3)
 		r3 = n3*p2
@@ -31,7 +31,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 359; 
+ * @POSICAO-CURSOR = 265; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
