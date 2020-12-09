@@ -37,7 +37,7 @@ programa
 
 		 escreva("\n A Média dos Salarios e: "+ mediaSalario)
 		 escreva("\n A Media de filhos e: ", mediaNumFilhos)
-		 escreva("\O Maior Salario e de:  ", maiorSalario)
+		 escreva("\nO Maior Salario e de:  ", maiorSalario)
 	 escreva("\nO Percentual de pessoas com salário até R$100,00  e de: ", percentualPessoasQganham100ouMenos,"%")
 		
 			
@@ -64,7 +64,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1270; 
+ * @POSICAO-CURSOR = 1205; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
