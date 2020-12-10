@@ -7,11 +7,33 @@ public class CadLoja {
 	public static void main(String[] args) {
 		
 		//espada();
+		
 		Scanner leia = new Scanner (System.in);
+	
+		
+	
+		
 		char generoCliente;
 		int continua;
 		int opcao;
+		int tamanhoLinha;
 		String nomeCliente;
+		String produtos[] = {"Mario","Link","Ellie","Joel","Luffy","Yoda","Sora","Killua","Gon","Roxas"};
+		String CodigoProdutos[] =new String[10];
+		int Unidade[] = {5,4,6,2,4,9,4,8,2,1};
+		int preco[] = {100,500,264,305,145,842,458,145,250,110};
+		int opcaoProduto=0;
+		int opcaoQuantidade;
+		
+		//System.out.println("Qual o tamanho da Linha ? ");
+		
+	//	tamanhoLinha = leia.nextInt();
+		//linha(tamanhoLinha);
+		
+		for (int x=0; x<10; x++) {
+			CodigoProdutos[x] = "J-"+(x+1);
+			
+			}
 		
 		MenuInicial();
 		System.out.println();
@@ -40,25 +62,40 @@ public class CadLoja {
 			System.out.println("Seja Bem vinde  "+nomeCliente);
 		}
 		
-		System.out.println("Deseja continuar Sim(S)[1] ou Não(N)[1] ");
+		System.out.println("Deseja continuar Sim(S)[1] ou Não(N)[2] ");
 		continua = leia.nextInt();
 		
 		while(continua!=1) {
 			System.out.println("Deseja continuar Sim(S) ou Não(N) ");
 			opcao =leia.nextInt();
-			
-		}
 		 MenuInicial();
-
+		}
+			 
 		
 		break;
 		}
 		case 2 :
 			
-			System.out.println("WIP");
-			
-		break;
+			inseriLinha(60,"═");
+			System.out.println("Estoque dos Produtos");
+			inseriLinha(60,"═");
+			System.out.println("Estoque\tCOD\tNOME\tUNIDADE\tPRECO");
 		
+			for (int x=0; x<10; x++)
+			{
+				
+				System.out.printf("\t%s \t%s \t %d \tR$%d\n",CodigoProdutos[x],produtos[x],Unidade[x],preco[x]);
+				
+			}
+			System.out.println("Qual Produto voce deseja comprar?(escolha o produto pela numeracao de seu Cod)");
+			
+			opcaoProduto =leia.nextInt();
+			opcaoProduto=opcaoProduto-1;
+			System.out.println("O produto escolhido foi "+produtos[opcaoProduto]+" e ele custa R$"+preco[opcaoProduto]+",00");
+			System.out.println("Quantos desse item voce gostataria");
+			opcaoQuantidade =leia.nextInt();
+			preco[opcaoProduto] =preco[opcaoProduto]*opcaoQuantidade;
+			System.out.println("Seus brinquedos do(a)"+produtos[opcaoProduto]+" ficaram no valor de R$"+preco[opcaoProduto]+",00");
 		case 3 :
 			
 			System.out.println("Obriagado Volte Sempre!");
@@ -72,11 +109,16 @@ public class CadLoja {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	public static void linha() {
-		System.out.println("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n");
+	public static void linha(int tamanhoLinha) {
+		
+		for(int x =0;x<tamanhoLinha;x++) {
+		
+			System.out.print("■");
 	}
+		}
 	
 	public  static void MenuInicial(){
+	  
 		
 		System.out.println(" \n■■■■■■■■■■■■■ BEM VINDO A J-ACTION! ■■■■■■■■■■■■■■■ ");
 		System.out.println("\n♣♣♣♣♣♣♣♣♣♣♣♣ O que Voce deseja? ♣♣♣♣♣♣♣♣♣♣♣♣♣♣");
@@ -114,6 +156,7 @@ public class CadLoja {
 	
 		System.out.println("Deseja continuar Sim(S) ou Não(N) ");
 		opcao =leia.next().toUpperCase().charAt(0);
+		leia.close();
 		while(opcao!='S'&& opcao!='N') {
 			System.out.println("Deseja continuar Sim(S) ou Não(N) ");
 			opcao =leia.next().toUpperCase().charAt(0);
@@ -136,8 +179,8 @@ public class CadLoja {
 		System.out.println("_____($$$$$)_______________($$$$$)_______________($$$$$)_____");
 		System.out.println("______($$$$$)____________($$$$$$$$$)____________($$$$$)_______");
 		System.out.println("________($$$$$$$)______($$$$$$$$$$$$$)______($$$$$$$)________");
-		System.out.println("_____($$$$$$$$$$$$$$$$$$$$$$$_$$$$$$$$$$$$$$$$$$$$$$$)_____");
-		System.out.println("___________($$$$$$$$$$$$$$$$___$$$$$$$$$$$$$$$$)____________");
+		System.out.println("_____($$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$)_____");
+		System.out.println("___________($$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$)____________");
 		System.out.println("_______($$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$)______");
 		System.out.println("_____________________($$$$$$$$$$$$$$$$$)_____________________");
 		System.out.println("__________________________($$$$$$$)__________________________");
@@ -190,8 +233,23 @@ public class CadLoja {
 		System.out.println("____________________________($^$)____________________________");			
 		System.out.println("____________________________($$$)____________________________");		
 		System.out.println("_____________________________($)_____________________________");		
+System.out.println();
+	}	
+	/*public static void jAction(){
+		
+		System.out.println("    ___                 ________  ________ _________  ___  ________  ________   ___       ");        
+		System.out.println("   |\  \               |\   __  \|\   ____|\___   ___|\  \|\   __  \|\   ___  \|\  \      ");    
+		System.out.println("   \ \  \  ____________\ \  \|\  \ \  \___\|___ \  \_\ \  \ \  \|\  \ \  \\ \  \ \  \     "); 
+		System.out.println(" __ \ \  \|\____________\ \   __  \ \  \       \ \  \ \ \  \ \  \\\  \ \  \\ \  \ \  \    "); 
+		System.out.println("|\  \\_\  \|____________|\ \  \ \  \ \  \____   \ \  \ \ \  \ \  \\\  \ \  \\ \  \ \__\   ");    
+		System.out.println("\ \________\              \ \__\ \__\ \_______\  \ \__\ \ \__\ \_______\ \__\\ \__\|__|   ");    
+		System.out.println(" \|________|               \|__|\|__|\|_______|   \|__|  \|__|\|_______|\|__| \|__|   ___ ");    
+		System.out.println("                                                                                     |\__\");    
+		System.out.println("                                                                                     \|__|");   
+Sys);
+	}
+	
 
-	}				
 		/*public static void Logo(){
 		 * 
 		 * 
@@ -454,5 +512,65 @@ _______________________________▀▀▀▀
 ``````¶¶¶¶0¶¶¶¶00000000000000000000000000000001```_1_11
 
 
+/*
+	
+	
+	sysot
+	
+			System.out.println("");
+
+	
+                                                                                
+	
+	
+                                                                 
+                
+
+                                                    
+       __            ___       ______ .___________.__    ______   .__   __.  __  
+      |  |          /   \     /      ||           |  |  /  __  \  |  \ |  | |  | 
+      |  |  ______ /  ^  \   |  ,----'`---|  |----|  | |  |  |  | |   \|  | |  | 
+.--.  |  | |______/  /_\  \  |  |         |  |    |  | |  |  |  | |  . `  | |  | 
+|  `--'  |       /  _____  \ |  `----.    |  |    |  | |  `--'  | |  |\   | |__| 
+ \______/       /__/     \__\ \______|    |__|    |__|  \______/  |__| \__| (__) 
+                                                                                 
+                                                                            
+System.out.println("    ___                 ________  ________ _________  ___  ________  ________   ___       ");        
+System.out.println("   |\  \               |\   __  \|\   ____|\___   ___|\  \|\   __  \|\   ___  \|\  \      ");    
+System.out.println("   \ \  \  ____________\ \  \|\  \ \  \___\|___ \  \_\ \  \ \  \|\  \ \  \\ \  \ \  \     "); 
+System.out.println(" __ \ \  \|\____________\ \   __  \ \  \       \ \  \ \ \  \ \  \\\  \ \  \\ \  \ \  \    "); 
+System.out.println("|\  \\_\  \|____________|\ \  \ \  \ \  \____   \ \  \ \ \  \ \  \\\  \ \  \\ \  \ \__\   ");    
+System.out.println("\ \________\              \ \__\ \__\ \_______\  \ \__\ \ \__\ \_______\ \__\\ \__\|__|   ");    
+System.out.println(" \|________|               \|__|\|__|\|_______|   \|__|  \|__|\|_______|\|__| \|__|   ___ ");    
+System.out.println("                                                                                     |\__\");    
+System.out.println("                                                                                     \|__|");    
+       
+                                       
+                                                                            
+    ___                 ________  ________ _________  ___  ________  ________   ___       
+   |\  \               |\   __  \|\   ____|\___   ___|\  \|\   __  \|\   ___  \|\  \      
+   \ \  \  ____________\ \  \|\  \ \  \___\|___ \  \_\ \  \ \  \|\  \ \  \\ \  \ \  \     
+ __ \ \  \|\____________\ \   __  \ \  \       \ \  \ \ \  \ \  \\\  \ \  \\ \  \ \  \    
+|\  \\_\  \|____________|\ \  \ \  \ \  \____   \ \  \ \ \  \ \  \\\  \ \  \\ \  \ \__\   
+\ \________\              \ \__\ \__\ \_______\  \ \__\ \ \__\ \_______\ \__\\ \__\|__|   
+ \|________|               \|__|\|__|\|_______|   \|__|  \|__|\|_______|\|__| \|__|   ___ 
+                                                                                     |\__\
+                                                                                     \|__|
+                                                                                                                             
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+                                                                            
 		*/
+	public static void inseriLinha(int tamanho, String simbolo) {
+		for (int i = 0; i < tamanho; i++) {
+			System.out.print(simbolo);
+		}
+		System.out.println();
+	
+	}
+		
 		}
