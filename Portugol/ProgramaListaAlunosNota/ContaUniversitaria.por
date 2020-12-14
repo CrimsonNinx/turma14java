@@ -1,5 +1,22 @@
 programa
-{
+{	   real saldo = 0.0
+        real credito = 1000.0
+        real debito = 0.0
+        inteiro movimento = 0
+        caracter voltar = 'V'
+        inteiro numeroConta = 1
+        cadeia nomeUsuario
+        inteiro numeroUsuario = 0
+        inteiro cpf = 111
+        inteiro cpfUser = 0
+        real saldoatual =0.0
+        real dinheiro = 0.0
+        inteiro x=0
+        inteiro dia = 5;
+        real retirada
+        real armazenadorDoSaldo
+        inteiro numDias = 10
+        
 	funcao menuEntrada(){
         inteiro opcao
         escreva(" \nBEM VINDO AO G5 BANK ","\n")
@@ -9,7 +26,7 @@ programa
         escreva("\nDIGITE O NUMERO DA CONTA : ")
         leia(numeroUsuario)
         escreva("\n DIGITE O CPF : ")
-        leia(cpfUser)
+        leia(cpfUser)	
 		escreva("Informe o numero do dia")
 		leia(numDias)
         limpa()
@@ -61,28 +78,11 @@ programa
         }
     }
     
-	   real saldo = 0.0
-        real credito = 1000.0
-        real debito = 0.0
-        inteiro movimento = 0
-        caracter voltar = 'V'
-        inteiro numeroConta = 1
-        cadeia nomeUsuario
-        inteiro numeroUsuario = 0
-        inteiro cpf = 111
-        inteiro cpfUser = 0
-        real saldoatual =0.0
-        real dinheiro = 0.0
-        inteiro x=0
-        inteiro dia = 5;
-        real retirada
-        real armazenadorDoSaldo
-        inteiro numDias = 10
-        
+	   
        
     funcao inicio()
     {
-    		menuEntrada()
+    		
     		menu()
     }
     funcao contador()
@@ -152,7 +152,7 @@ programa
 
 		escreva("Quanto dinheiro você quer emprestado ? ")
         	leia(dinheiro)
-        	se((movimento<numDias) e (dinheiro >=0 e dinheiro<=credito))
+        	se((movimento<10) e (dinheiro >=0 e dinheiro<=credito))
         	{
         	
         	movimento++
@@ -180,7 +180,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2008; 
+ * @POSICAO-CURSOR = 2984; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
