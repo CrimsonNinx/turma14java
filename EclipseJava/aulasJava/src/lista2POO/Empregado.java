@@ -6,12 +6,8 @@ public class Empregado extends PessoaEx1 {
 	private int salarioBase;//(vencimento base)
 	private int imposto;//porcentagem retida dos impostos).
 	
-	//metodos
-		//public double calcularSalario(){
-	//	double saldo =this.valorCredito-this.valorDivida;
-	//	return saldo;
 	
-	//}
+
 
 	
 	
