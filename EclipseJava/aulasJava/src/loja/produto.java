@@ -1,6 +1,6 @@
 package loja;
 
-public class Porduto extends CadLoja {
+public class produto extends CadLoja {
 	private String nomeProduto;
 	private String codProduto;
 	private double precoUnitario;
@@ -21,7 +21,7 @@ public class Porduto extends CadLoja {
 	}
 	
 	//construtor 
-	public Porduto(String nomeProduto, String codProduto, double precoUnitario) {
+	public produto(String nomeProduto, String codProduto, double precoUnitario) {
 		super();
 		this.nomeProduto = nomeProduto;
 		this.codProduto = codProduto;
@@ -30,7 +30,7 @@ public class Porduto extends CadLoja {
 	
 	
 	
-	public Porduto(String nomeProduto, String codProduto, double precoUnitario, int qtdeProdutoEstoque) {
+	public produto(String nomeProduto, String codProduto, double precoUnitario, int qtdeProdutoEstoque) {
 		super();
 		this.nomeProduto = nomeProduto;
 		this.codProduto = codProduto;

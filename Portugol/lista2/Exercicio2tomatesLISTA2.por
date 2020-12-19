@@ -17,8 +17,8 @@ programa
 	senao se (pesoTomates>50){
 		
 		tomatesExcesso = pesoTomates - 50
-		valorDaMulta = tomatesExcesso*MULTAPORKG
-		escreva ("voce excedeu o valor dos tomates em " +tomatesExcesso + "e vai pagar uma multa de "+valorDaMulta+" reais." )
+		
+		escreva ("voce excedeu o valor dos tomvalorDaMulta = tomatesExcesso*MULTAPORKGates em " +tomatesExcesso + "e vai pagar uma multa de "+valorDaMulta+" reais." )
 		
 		
 						}
@@ -44,7 +44,7 @@ variável E (Excesso) e na variável M o valor da multa que João deverá pagar.
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 598; 
+ * @POSICAO-CURSOR = 447; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

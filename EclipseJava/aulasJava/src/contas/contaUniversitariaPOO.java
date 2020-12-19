@@ -1,6 +1,6 @@
 package contas;
 
-public class contaUniversitariaPOO extends Contas{
+public class contaUniversitariaPOO extends BancoPrincipal{
 	private double valorLimiteMax;
 	private double valorLimite;
 
