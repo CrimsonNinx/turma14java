@@ -1,19 +1,21 @@
 package contas;
 
-	public abstract class Contas{
+public abstract class Conta {
 	private int numeroConta;
 	private double saldo;
 	private String cpf;
+	public double debito;
+	public double credito;
 	
 	//construtores - regras de construção da classe
-	public Contas() {//padrao
+	public Conta() {//padrao
 		
 	}
-	public Contas(int numeroConta) {
+	public Conta(int numeroConta) {
 		this.numeroConta = numeroConta;
 	}
 	//sobrecarga
-	public Contas(int numeroConta, String cpf) {
+	public Conta(int numeroConta, String cpf) {
 		this.numeroConta = numeroConta;
 		this.cpf = cpf;
 	}
@@ -43,4 +45,3 @@ package contas;
 	
 	
 }
-

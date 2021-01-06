@@ -1,19 +1,23 @@
+
 package contas;
 
-public class contaUniversitariaPOO extends BancoPrincipal{
-	private double valorLimiteMax;
+public class contaUniversitariaPOO extends Conta{
 	private double valorLimite;
-
 	private double limiteUniversitarioCadastrado;
 
+	public contaUniversitariaPOO(int numeroConta, double limite) {
+		super(numeroConta);
+		this.limiteUniversitarioCadastrado = limite;
+		this.valorLimite = limite;
+	}
 	
 	//métodos
 	public double getLimite() {
-		return valorLimiteMax;
+		return valorLimite;
 	}
 
 	public void setLimite(double valorLimite) {
-		this.valorLimiteMax = valorLimite;
+		this.valorLimite = valorLimite;
 	}
 	
 	
@@ -21,11 +25,11 @@ public class contaUniversitariaPOO extends BancoPrincipal{
 		boolean teste;
 		if(valor <= super.getSaldo()) {
 			teste = true;
-		} else if(valor <= (this.getLimite() + super.getSaldo())) {
+		} else if(valor <= (this.valorLimite + super.getSaldo())) {
 			double valorCredito = valor - super.getSaldo();
 			super.credito(valorCredito);
 			
-			this.valorLimiteMax-=valorCredito;
+			this.valorLimite-=valorCredito;
 			
 			teste=true;
 		} else {
@@ -34,20 +38,17 @@ public class contaUniversitariaPOO extends BancoPrincipal{
 		return teste;
 	}
 	
-	
-	
 	public void restituiLimiteCadastrado() {
-        if(valorLimite < limiteUniversitarioCadastrado) {
-            if(super.getSaldo()>0 && super.getSaldo() >= (limiteUniversitarioCadastrado - valorLimite)) {
-                double valorDebito = limiteUniversitarioCadastrado - valorLimite;
-                super.debito(valorDebito);
-                valorLimite += valorDebito; 
-            } else if(super.getSaldo()>0 && super.getSaldo()<(limiteUniversitarioCadastrado - valorLimite)) {
-                double valorDebito = getSaldo();
-                super.debito(valorDebito);
-                valorLimite+=valorDebito;
-            }
-        }
+		if(valorLimite < limiteUniversitarioCadastrado) {
+			if(super.getSaldo()>0 && super.getSaldo() >= (limiteUniversitarioCadastrado - valorLimite)) {
+				double valorDebito = limiteUniversitarioCadastrado - valorLimite;
+				super.debito(valorDebito);
+				valorLimite += valorDebito; 
+			} else if(super.getSaldo()>0 && super.getSaldo()<(limiteUniversitarioCadastrado - valorLimite)) {
+				double valorDebito = getSaldo();
+				super.debito(valorDebito);
+				valorLimite+=valorDebito;
+			}
 		}
-		
 	}
+}
